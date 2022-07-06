@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.App .App-left {
+  height: auto;
+  width: 15.5vw;
+  border-right: 1px solid #F2F2F2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+.App .App-left::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-right: 1px solid #009EED;
+  height: 33vh;
+}
+.App .App-left .App-left-logo {
+  width: 55px;
+  height: 64px;
+  margin-top: 30px;
+  background-image: url(./img/logo.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 65px;
+}
+.App .App-left nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.App .App-left nav ul li {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.App .App-left nav ul li .punct-two-line {
+  display: block;
+  width: 100%;
+}
+.App .App-left nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+.App .App-left nav ul li a:hover {
+  color: #0878b0;
+}
+.App .App-left nav ul li .active {
+  color: #009EED;
+}
+.App .App-center {
+  width: 50vw;
+  height: auto;
+  min-height: 100vh;
+}
+.App .App-center .App-center-top {
+  margin-top: 30px;
+  width: 100%;
+}
+.App .App-center .App-center-top nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.App .App-center .App-center-top nav ul li {
+  margin: 0 15px;
+}
+.App .App-center .App-center-top nav ul li .punct-two-line {
+  display: none;
+}
+.App .App-center .App-center-top nav ul li:nth-child(1) {
+  margin-left: 0;
+}
+.App .App-center .App-center-top nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+.App .App-center .App-center-top nav ul li a:hover {
+  border-bottom: 1px dashed black;
+}
+.App .App-center .App-center-top nav ul li .active {
+  border-bottom: 1px solid black;
+}
+.App .App-center .App-center-main .App-center-content .App-center-content-elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.App .App-center .App-center-main .App-center-content .App-center-content-elements .App-center-content-elements-element {
+  width: 20%;
+  height: 200px;
+  border-radius: 2px;
+  border: 1px solid #F2F2F2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  margin-bottom: 5%;
+}
+.App .App-center .App-center-main .App-center-content .App-center-content-elements .App-center-content-elements-element:hover {
+  background-color: #009EED;
+}
+.App .App-right {
+  background-color: #009EED;
+  color: #F3F3F3;
+  width: 24vw;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+.App .App-right .App-right-close {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 60px;
+  margin-top: 30px;
+}
+.App .App-right .App-right-close p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 0 20px;
+}
+
+@media (max-width: 964px) {
+  .App .App-center .App-center-main .App-center-content .App-center-content-elements .App-center-content-elements-element {
+    width: 47.5%;
+  }
+}
+@media (max-width: 720px) {
+  .App {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .App .App-left {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    border: #009EED solid 1px;
+    background-color: rgba(233, 248, 255, 0.6941176471);
+  }
+  .App .App-left .App-left-logo {
+    margin: 2vw;
+  }
+  .App .App-left nav {
+    width: 50%;
+  }
+  .App .App-left nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .App .App-left nav ul li {
+    margin: 0;
+  }
+  .App .App-center {
+    width: 100%;
+  }
+  .App .App-center .App-center-top {
+    display: none;
+  }
+  .App .App-center .App-center-main {
+    padding: 10px;
+  }
+  .App .App-right {
+    width: 30%;
+    margin-left: auto;
+  }
+  .App .App-right .App-right-close {
+    margin: 0;
+    padding: 0;
+  }
+}

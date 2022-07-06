@@ -1,0 +1,221 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+$sb: space-between;
+$mt30: 30px;
+
+.App{
+    display: flex;
+    justify-content: $sb;
+    width: 100%;
+    .App-left{
+        height: auto;
+        width: 15.5vw;
+        border-right: 1px solid #F2F2F2;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        box-sizing: border-box;
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-right: 1px solid #009EED;
+            height: 33vh;
+        }
+        .App-left-logo{
+            width: 55px;
+            height: 64px;
+            margin-top: $mt30;
+
+            background-image: url(./img/logo.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-bottom: 65px;
+        }
+        nav{
+            ul{
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                li{
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 13px;
+                    line-height: 20px;
+                    margin-bottom: 20px;
+                    .punct-two-line{
+                        display: block;
+                        width: 100%;
+                    }
+                    a{
+                        color: black;
+                        text-decoration: none;
+
+                        &:hover{
+                            color: #0878b0;
+                        }
+                    }
+                    .active{
+                        color: #009EED;
+                    }
+                }
+            }
+        }
+    }
+    .App-center{
+        
+        width: 50vw;
+        height: auto;
+        min-height: 100vh;
+        .App-center-top{
+            margin-top: $mt30;
+            width: 100%;
+            nav{
+                ul{
+                    display: flex;
+                    align-items: center;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        margin: 0 15px;
+                        .punct-two-line{
+                            display: none;
+                        }
+                        &:nth-child(1){
+                            margin-left: 0;
+                        }
+                        a{
+                            color: black;
+                            text-decoration: none;
+                            &:hover{
+                                border-bottom: 1px dashed black;
+                            }
+                        }
+                        .active{
+                            border-bottom: 1px solid black;
+                        }
+                    }
+
+                }
+            }
+        }
+        .App-center-main{
+            .App-center-content{
+                .App-center-content-elements{
+                    display: flex;
+                    justify-content: $sb;
+                    flex-wrap: wrap;
+                    .App-center-content-elements-element{
+                        width: 20%;
+                        height: 200px;
+                        border-radius: 2px;
+                        border: 1px solid #F2F2F2;
+                        box-sizing: border-box;
+                        transition: 200ms;
+                        margin-bottom: 5%;
+                        &:hover{
+                            background-color: #009EED;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .App-right{
+        background-color: #009EED;
+        color: #F3F3F3;
+        width: 24vw;
+        height: auto;
+        display: flex;
+        justify-content: end;
+        .App-right-close{
+            display: flex;
+            max-height: 50px;
+            align-items: center;
+            justify-content: center;
+            margin-right: 60px;
+            margin-top: $mt30;
+            p{
+                font-style: normal;
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 16px;
+                padding: 0 20px;
+            }
+        }
+
+    }
+}
+@media (max-width:964px){
+    .App{
+        .App-center{
+            .App-center-main{
+                .App-center-content{
+                    .App-center-content-elements{
+                        .App-center-content-elements-element{
+                            width: 47.5%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+@media (max-width:720px){
+    .App{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        .App-left{
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            position: fixed;
+            bottom: 0;
+            border: #009EED solid 1px;
+            background-color: #e9f8ffb1;
+            .App-left-logo{
+                margin: 2vw;
+            }
+            nav{
+                width: 50%;
+                ul{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    li{
+                        margin: 0;
+                    }
+
+                }
+            }
+        }
+        .App-center{
+            width: 100%;
+            .App-center-top{
+                display: none;
+            }
+            .App-center-main{
+                padding: 10px;
+            }
+        }
+        .App-right{
+            width: 30%;
+            margin-left: auto;
+            .App-right-close{
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+}
